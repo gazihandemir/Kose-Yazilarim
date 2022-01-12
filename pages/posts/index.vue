@@ -1,4 +1,15 @@
-<template></template>
+<template>
+  <div>
+    <PostList />
+  </div>
+</template>
 <script>
-export default {};
+import PostList from "@/components/post/PostList";
+
+export default {
+  components: {
+    PostList,
+  },
+};
 </script>
+<style scoped></style>
