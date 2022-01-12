@@ -1,0 +1,44 @@
+[
+  {
+    "name": "admin",
+    "path": "/admin",
+    "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\admin\\\\index.vue",
+    "chunkName": "pages/admin/index",
+    "_name": "_927203ce"
+  },
+  {
+    "name": "posts",
+    "path": "/posts",
+    "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\posts\\\\index.vue",
+    "chunkName": "pages/posts/index",
+    "_name": "_7c0ccb15"
+  },
+  {
+    "name": "admin-posts",
+    "path": "/admin/posts",
+    "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\admin\\\\posts\\\\index.vue",
+    "chunkName": "pages/admin/posts/index",
+    "_name": "_645b6aa8"
+  },
+  {
+    "name": "admin-posts-postId",
+    "path": "/admin/posts/:postId",
+    "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\admin\\\\posts\\\\_postId\\\\index.vue",
+    "chunkName": "pages/admin/posts/_postId/index",
+    "_name": "_5eb2ed32"
+  },
+  {
+    "name": "posts-postId",
+    "path": "/posts/:postId",
+    "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\posts\\\\_postId\\\\index.vue",
+    "chunkName": "pages/posts/_postId/index",
+    "_name": "_285a9136"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_752f8e4c"
+  }
+]
