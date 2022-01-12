@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light border-0">
-    <a class="navbar-brand" href="#">Köse Yazısı</a>
+    <nuxt-link to="/" class="navbar-brand" tag="a"> Köse Yazısı </nuxt-link>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,16 +14,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"
-            >Yazılar <span class="sr-only">(current)</span></a
-          >
-        </li>
+        <nuxt-link to="/posts" class="nav-item" tag="li">
+          <a class="nav-link" href="#">Yazılar</a>
+        </nuxt-link>
       </ul>
       <ul class="navbar-nav my-2 my-lg-0">
-        <li class="nav-item mr-sm-2">
-          <a class="nav-link" href="#">Admin</a>
-        </li>
+        <nuxt-link to="/admin" class="nav-item mr-sm-2" tag="li">
+          <a class="nav-link" href="#">Admin</a></nuxt-link
+        >
       </ul>
     </div>
   </nav>
