@@ -9,7 +9,7 @@
       align-items-center
     "
   >
-   <Post v-for="i in 3" :key="i"/> 
+    <Post v-for="i in 3" :key="i" :is-admin="isAdmin" />
   </div>
 </template>
 <script>
@@ -17,6 +17,13 @@ import Post from "@/components/post/Post";
 export default {
   components: {
     Post,
+  },
+  props: {
+    isAdmin: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
 };
 </script>
