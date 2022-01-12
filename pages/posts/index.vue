@@ -1,3 +1,4 @@
 <template></template>
-<script></script>
-<style scoped></style>
+<script>
+export default {};
+</script>

@@ -10,7 +10,7 @@
     "
   >
     <div class="overlay"></div>
-    <h1 class="text-center text-white">Nuxt.js | Köse Yazıları</h1>
+    <h1 class="text-center text-white">Nuxt.js | Köşe Yazıları</h1>
   </div>
 </template>
 

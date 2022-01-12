@@ -1,4 +1,18 @@
-<template></template>
+<template>
+  <div>
+    <PostList />
+    <About />
+  </div>
+</template>
 <script>
-export default {};
+import PostList from "@/components/post/PostList";
+import About from "@/components/home/About";
+
+export default {
+  components: {
+    PostList,
+    About,
+  },
+};
 </script>
+<style scoped></style>
