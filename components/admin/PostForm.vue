@@ -45,7 +45,7 @@
           <textarea
             v-model="post.text"
             class="form-control"
-            rows="5"
+            rows="5" 
           ></textarea>
         </div>
         <button @click="$router.push('/admin')" class="btn btn-danger">
