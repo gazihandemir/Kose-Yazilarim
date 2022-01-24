@@ -12,6 +12,16 @@ export default {
   components: {
     PostList,
   },
+  computed: {
+    fetchedPosts() {
+      return this.$store.getters.getPosts;
+    },
+  },
+};
+</script>
+<style scoped></style>
+
+<!-- 
   asyncData(context, callback) {
     setTimeout(() => {
       callback(null, {
@@ -41,6 +51,5 @@ export default {
       });
     }, 1000);
   },
-};
-</script>
-<style scoped></style>
+
+-->
