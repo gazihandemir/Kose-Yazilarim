@@ -13,7 +13,12 @@ const createStore = () => {
       addPost(state, post) {
         state.fetchedPosts.push(post);
       },
-      updatePost(state, post) {},
+      updatePost(state, editedPost) {
+        let postIndex = state.fetchedPosts.findIndex((post) => {
+          return post.id === editedPost.id;
+        });
+        state.fetchedPosts[postIndex] = editedPost;
+      },
     },
     actions: {
       nuxtServerInit(vuexContext, context) {
@@ -52,7 +57,18 @@ const createStore = () => {
             });
           });
       },
-      updatePost(vuexContext, post) {},
+      updatePost(vuexContext, editedPost) {
+        return axios
+          .put(
+            `https://kose-yazilarim-d82f6-default-rtdb.firebaseio.com/posts/${editedPost.id}.json`,
+            editedPost
+          )
+          .then((response) => {
+            console.log(editedPost);
+            vuexContext.commit("updatePost", editedPost);
+          })
+          .catch((e) => console.log(e));
+      },
     },
     getters: {
       getPosts(state) {

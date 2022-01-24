@@ -26,15 +26,14 @@ export default {
   },
   methods: {
     updatePost(editedPost) {
-      axios
-        .put(
-          `https://kose-yazilarim-d82f6-default-rtdb.firebaseio.com/posts/${this.$route.params.postId}.json`,
-          editedPost
-        )
-        .then((response) => {
-          this.$router.push("/admin");
+      this.$store
+        .dispatch("updatePost", {
+          ...editedPost,
+          id: this.$route.params.postId,
         })
-        .catch((e) => console.log(e));
+        .then((response) => {
+              this.$router.push("/admin");
+        });
     },
   },
 };
