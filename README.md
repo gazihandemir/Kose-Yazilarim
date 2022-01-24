@@ -1,6 +1,12 @@
 # kose-yazisi-uygulamasi
+Köşe yazılarının eklenebildiği, düzenlenebildiği ve listelenebildiği bir uygulama
 
-> My kickass Nuxt.js project
+Kullanılan Özellikler : 
+Vue , Vuex , Nuxt , Pages, Routing, Layouts, Components, Firebase
+
+
+
+
 
 ## Build Setup
 
@@ -19,4 +25,4 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
