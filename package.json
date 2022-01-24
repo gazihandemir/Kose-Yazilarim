@@ -1,8 +1,8 @@
 {
   "name": "kose-yazisi-uygulamasi",
   "version": "1.0.0",
-  "description": "My kickass Nuxt.js project",
-  "author": "Gökhan Kandemir",
+  "description": "Nuxt.js project",
+  "author": "Gazihan Demir",
   "private": true,
   "scripts": {
     "dev": "nuxt",
