@@ -11,8 +11,16 @@ export default {
   },
   methods: {
     savePost(post) {
-      console.log(post);
-      axios
+      this.$store.dispatch("addPost", post).then((response) => {
+        this.$router.push("/admin");
+      });
+    },
+  },
+};
+</script>
+
+<!-- 
+axios
         .post(
           "https://kose-yazilarim-d82f6-default-rtdb.firebaseio.com/posts.json",
           post
@@ -21,7 +29,5 @@ export default {
           console.log(res);
           this.$router.push("/admin");
         });
-    },
-  },
-};
-</script>
+
+--> 

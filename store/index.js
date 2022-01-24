@@ -10,6 +10,10 @@ const createStore = () => {
       setPosts(state, posts) {
         state.fetchedPosts = posts;
       },
+      addPost(state, post) {
+        state.fetchedPosts.push(post);
+      },
+      updatePost(state, post) {},
     },
     actions: {
       nuxtServerInit(vuexContext, context) {
@@ -33,6 +37,22 @@ const createStore = () => {
       setPosts(vuexContext, posts) {
         vuexContext.commit("setPosts", posts);
       },
+      addPost(vuexContext, post) {
+        // Return yazarak kullanıdğımız sayfalarda then ile promise alırız ve orada gerekli işlemleri yaparız ör : router işlemleri
+        return axios
+          .post(
+            "https://kose-yazilarim-d82f6-default-rtdb.firebaseio.com/posts.json",
+            post
+          )
+          .then((response) => {
+            console.log(response);
+            vuexContext.commit("addPost", {
+              ...post,
+              id: response.data.name,
+            });
+          });
+      },
+      updatePost(vuexContext, post) {},
     },
     getters: {
       getPosts(state) {
