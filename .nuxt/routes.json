@@ -3,36 +3,42 @@
     "name": "admin",
     "path": "/admin",
     "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\admin\\\\index.vue",
-    "chunkName": "pages/admin/index"
+    "chunkName": "pages/admin/index",
+    "_name": "_927203ce"
   },
   {
     "name": "posts",
     "path": "/posts",
     "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\posts\\\\index.vue",
-    "chunkName": "pages/posts/index"
+    "chunkName": "pages/posts/index",
+    "_name": "_7c0ccb15"
   },
   {
     "name": "admin-new-post",
     "path": "/admin/new-post",
     "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\admin\\\\new-post.vue",
-    "chunkName": "pages/admin/new-post"
+    "chunkName": "pages/admin/new-post",
+    "_name": "_73e70a94"
   },
   {
     "name": "admin-postId",
     "path": "/admin/:postId",
     "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\admin\\\\_postId\\\\index.vue",
-    "chunkName": "pages/admin/_postId/index"
+    "chunkName": "pages/admin/_postId/index",
+    "_name": "_d5f0ae3e"
   },
   {
     "name": "posts-postId",
     "path": "/posts/:postId",
     "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\posts\\\\_postId\\\\index.vue",
-    "chunkName": "pages/posts/_postId/index"
+    "chunkName": "pages/posts/_postId/index",
+    "_name": "_285a9136"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\VueProjects\\\\kose-yazilarim\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_752f8e4c"
   }
 ]
