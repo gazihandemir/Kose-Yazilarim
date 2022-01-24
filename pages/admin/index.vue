@@ -1,3 +1,4 @@
+<!-- pages -> admin -> index.vue -->
 <template>
   <div>
     <div class="container d-flex justify-content-center align-items-center">
@@ -5,7 +6,7 @@
         Yeni Bir Yazı Ekle
       </button>
     </div>
-    <PostList :is-admin="true" />
+    <PostList :posts="fetchedPosts" :is-admin="true" />
   </div>
 </template>
 <script>
@@ -15,6 +16,11 @@ export default {
   layout: "admin",
   components: {
     PostList,
+  },
+  computed: {
+    fetchedPosts() {
+      return this.$store.getters.getPosts;
+    },
   },
 };
 </script>

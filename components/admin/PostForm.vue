@@ -1,3 +1,4 @@
+<!-- components -> admin -> PostForm.vue -->
 <template>
   <div
     class="
@@ -45,7 +46,7 @@
           <textarea
             v-model="post.text"
             class="form-control"
-            rows="5" 
+            rows="5"
           ></textarea>
         </div>
         <button @click="$router.push('/admin')" class="btn btn-danger">
@@ -61,6 +62,7 @@ export default {
   data() {
     return {
       post: {
+        id:null,
         title: null,
         subTitle: null,
         author: null,
@@ -74,11 +76,26 @@ export default {
       required: false,
       default: false,
     },
+    post: {
+      type: Object,
+      required: false,
+    },
   },
   methods: {
     onSubmit() {
       this.$emit("submit", this.post);
     },
+  },
+  created() {
+    this.post = this.post
+      ? this.post
+      : {
+          id: null,
+          title: null,
+          subTitle: null,
+          text: null,
+          author: null,
+        };
   },
 };
 </script>

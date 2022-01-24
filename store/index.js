@@ -12,6 +12,9 @@ const createStore = () => {
         },
         actions: {
             nuxtServerInit(vuexContext, context) {
+                if(!process.client){
+                    console.log("Server Üzerinde çalışıyoruz...");
+                }
                 vuexContext.dispatch("setPosts",
                     [
                         {

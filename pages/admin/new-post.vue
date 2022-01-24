@@ -1,3 +1,4 @@
+<!-- pages -> admin -> new-post.vue -->
 <template>
   <PostForm @submit="savePost($event)" />
 </template>

@@ -1,3 +1,4 @@
+<!-- pages -> index.vue  -->
 <template>
   <div>
     <PostList :posts="fetchedPosts" />

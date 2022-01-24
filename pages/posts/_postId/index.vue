@@ -1,3 +1,5 @@
+<!-- pages -> posts ->  _postId ->index.vue  -->
+
 <template>
   <PostDetail :post="fetchPost" />
 </template>
