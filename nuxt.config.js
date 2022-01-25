@@ -33,16 +33,19 @@ module.exports = {
   css: [
     //  "~/assets/style/bootstrap.min.css"
   ],
-
+  env: {
+    baseUrl: "https://kose-yazilarim-d82f6-default-rtdb.firebaseio.com",
+  },
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ["~/plugins/Components.js"],
 
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ["@nuxtjs/axios"],
+  axios: {},
 
   /*
    ** Build configuration
@@ -53,7 +56,4 @@ module.exports = {
      */
     extend(config, ctx) {},
   },
-  generate: {
-    dir: 'public',
-  }
 };

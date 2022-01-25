@@ -1,6 +1,5 @@
 // store -> index.js
 import Vuex from "vuex";
-import axios from "axios";
 const createStore = () => {
   return new Vuex.Store({
     state: {
@@ -25,10 +24,8 @@ const createStore = () => {
         if (!process.client) {
           console.log("Server Üzerinde çalışıyoruz...");
         }
-        return axios
-          .get(
-            "https://kose-yazilarim-d82f6-default-rtdb.firebaseio.com/posts.json"
-          )
+        return context.app.$axios
+          .get(`${process.env.baseUrl}/posts.json`)
           .then((response) => {
             let data = response.data;
             let postArray = [];
@@ -44,11 +41,8 @@ const createStore = () => {
       },
       addPost(vuexContext, post) {
         // Return yazarak kullanıdğımız sayfalarda then ile promise alırız ve orada gerekli işlemleri yaparız ör : router işlemleri
-        return axios
-          .post(
-            "https://kose-yazilarim-d82f6-default-rtdb.firebaseio.com/posts.json",
-            post
-          )
+        return this.$axios
+          .post(`${process.env.baseUrl}/posts.json`, post)
           .then((response) => {
             console.log(response);
             vuexContext.commit("addPost", {
@@ -58,11 +52,8 @@ const createStore = () => {
           });
       },
       updatePost(vuexContext, editedPost) {
-        return axios
-          .put(
-            `https://kose-yazilarim-d82f6-default-rtdb.firebaseio.com/posts/${editedPost.id}.json`,
-            editedPost
-          )
+        return this.$axios
+          .put(`${process.env.baseUrl}/posts/${editedPost.id}.json`, editedPost)
           .then((response) => {
             console.log(editedPost);
             vuexContext.commit("updatePost", editedPost);
